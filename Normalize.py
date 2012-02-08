@@ -5,7 +5,19 @@ file = open(name)
 newfile = open(newname,'w')                     # Creates a newfile in which to store output
 
 for line in file:
-    linelist = line.lower().split()             # Only adds the words to a list                   
+    line = line.lower()                         # Only adds the words to a list
+    linelist = line.split()
+
     if linelist:                                # If the list is not empty it writes it to the new file with a single space in between
         newfile.write(' '.join(linelist)+' ')
+
+file.close()
+newfile.close()
+
+read = open(newname)
+for line in read:
+    print line
+
+read.close()
+
 
