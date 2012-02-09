@@ -13,7 +13,7 @@ smslines = sms.readlines()
 for lineno in range(len(originallines)):                        # Generates index numbers
     originalwords = originallines[lineno].split()               # Creates a list containing the words in each line
     smswords = smslines[lineno].split()
-    for word in range(len(originalwords)):                      # Generates index numbers
+    for word in range(len(originalwords)-1):                      # Generates index numbers
         if originalwords[word] == smswords[word]:               # Words in the same position
             wordcount += 1
             correctcount += 1
@@ -23,4 +23,4 @@ for lineno in range(len(originallines)):                        # Generates inde
 accuracy = correctcount/float(wordcount)*100
 print accuracy,'%'
 
-    
+
