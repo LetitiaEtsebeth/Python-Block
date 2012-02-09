@@ -9,12 +9,11 @@ book = open(name)
 newbook = open('sms'+name,'w')
 
 start_time = time.clock()                               # Set a variable with the starting time
-stripwords = []
 for text in book:
     text = text.lower().strip()                         # Changes the text into all lowercase and strips the whitespace
     strip = vow_punc.sub('',text)                       # Replace punctuation and the vowels with an empty string
     strip = doubles.sub(r'\1',strip)                    # Replace duplicates with one of the same character
-    newbook.write(strip)
+    newbook.write(strip+'\n')
 
 book.close()
 newbook.close()
