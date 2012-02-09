@@ -14,7 +14,7 @@ for line in code:
     for word in line:
         newline += sms_dict[word]                       # Uses the dictionary to add the english word to a new line
         newline += ' '
-    decode.write(newline+' ')                          # Writes the line to a file
+    decode.write(newline+'\n')                           # Writes the line to a file
 
 code.close()
 decode.close()
