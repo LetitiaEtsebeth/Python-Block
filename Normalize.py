@@ -14,7 +14,7 @@ for line in textfile:
     linelist = line.split()
 
     if linelist:                                            # If the list is not empty it writes it to the new file with a single space in between
-        newfile.write(' '.join(linelist)+' ')               # Writes to the new file
+        newfile.write(' '.join(linelist)+'\n')               # Writes to the new file
 
 textfile.close()
 newfile.close()
